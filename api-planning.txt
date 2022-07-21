@@ -55,6 +55,32 @@ req:
 
 GROUP: BLOG
 [1] - Create Blog Post
+[POST] : {root.api}/{version}/blog/Post
+
+req:
+{
+    "title": "title blog",
+    "image": "image.png",
+    "body": "lorem ipsum dolor"
+}
+
+res:
+{
+    "message": "Create Blog Post Succes",
+    "data": {
+        "post_id": 1,
+        "title": "title blog",
+        "image": "image.png",
+        "body": "lorem ipsum dolor",
+        "created_at": "21/07/2022",
+        "author" : {
+            "uid": 1,
+            "name": "testing"
+        }
+    }
+}
+
+
 [2] - Get Blog Post
 [3] - Update Blog Post
 [5] - Delete Blog Post
